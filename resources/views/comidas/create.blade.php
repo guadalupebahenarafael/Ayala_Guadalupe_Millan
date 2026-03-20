@@ -20,7 +20,7 @@
         </div>
 
         <div class="input-group mb-3">
-            <input type="text" name="Disponibilidad" placeholder="Disponibilidad" class="form-control">
+            <input type="boolean" name="Disponibilidad" placeholder="Disponibilidad" class="form-control">
         </div>
 
         <div class="input-group mb-3">
@@ -30,13 +30,25 @@
         <div class="input-group mb-3">
             <input type="text" name="Descripcion" placeholder="Descripcion" class="form-control">
         </div>
+
         <div class="input-group mb-3">
-            <input type="text" name="Tipo de comida" placeholder="Tipo de comida" class="form-control">
+            <select name="Tipo_de_comida" class="form-control">
+                <option value="" disabled selected>-- Tipo de Alimento --</option>
+                <option value="Individual">Individual</option>
+                <option value="Combo">Combo</option>
+            </select>
         </div>
 
         <div class="input-group mb-3">
-            <input type="text" name="Categoria" placeholder="Categoria" class="form-control">
+            <select name="Categoria" class="form-control">
+                <option value="" disabled selected>-- Categoría --</option>
+                <option value="Snacks">Snacks</option>
+                <option value="Helados">Helados</option>
+                <option value="Dulces">Dulces</option>
+                <option value="Promocionales">Promocionales</option>
+            </select>
         </div>
+
 
         <div class="input-group mb-3">
             <input type="number" name="Stock" placeholder="Stock" class="form-control">   
