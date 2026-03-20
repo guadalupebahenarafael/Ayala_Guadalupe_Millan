@@ -13,7 +13,7 @@
     <h1>Registro de Comidas</h1>
     <br>
 
-    <form action="" method="POST">
+    <form action="{{ route('comidas.store') }}" method="POST">
         @csrf 
         <div class="input-group mb-3">
             <input type="text" name="nombre" placeholder="Nombre" class="form-control">

@@ -1,13 +1,27 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
 use App\Http\Controllers\AuthController;
-
+use App\Http\Controllers\ComidasController;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::middleware(['auth'])->group(function () {
+    // Generar rutas de todos los metodos del controlador
+    Route::resource('comidas', ComidasController::class);
+});
+
+// Crear ruta para la vista de actualización de un registro
+Route::get('/comidas/{id}/edit', [
+    ComidasController::class, 'edit'
+])->name('comidas.edit');
+
+// Crear ruta para actualizar el registro
+Route::get('comidas/{id}', [
+    ComidasController::class, 'update'
+])->name('comidas.update');
 
 // Ruta para el formulario de registro
 Route::get('/registro', [

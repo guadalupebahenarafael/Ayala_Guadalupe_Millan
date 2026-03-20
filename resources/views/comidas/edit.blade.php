@@ -11,7 +11,7 @@
     @section('content')
 
     <h1>EDITAR COMIDA: {{ $comida->nombre }}</h1>
-    <form action="" method="POST">
+    <form action="{{ route('comidas.update', $comida) }}" method="POST">
          @csrf
         <!-- Indicar método para actualizar un registro -->
         @method('PUT')
