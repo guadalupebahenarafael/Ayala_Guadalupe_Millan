@@ -15,7 +15,7 @@ class ComidasController extends Controller
         //Obtner todos los registros de comida
         $comidas = Comidas::all();
         //Se manda la variable de los registros a la vista
-        return view('comidas.index', compact('comida'));
+        return view('comidas.index', compact('comidas'));
     }
 
     /**
@@ -73,35 +73,35 @@ class ComidasController extends Controller
             'Disponibilidad' => 'required',
             'Precio' => 'required',
             'Descripcion' => 'required',
-            'Tipo de comida' => 'required',
+            'Tipo_de_comida' => 'required',
             'Categoria' => 'required',
             'Stock' => 'required'
         ]);
 
         //Se realiza la actualizacion del registro
-<<<<<<< HEAD
+
 
         $comida->update($request->all());
-=======
-        $comidas->update($request->all());
->>>>>>> 87c2e73501f04c0aa7db71da5ee62218e0fcb243
+
+        $comida->update($request->all());
+
 
         //Se retorna la actualizacion al index
         return redirect()->route('comidas.index')
             ->with('success', 'Comida actualizada correctamente');
-<<<<<<< HEAD
 
-=======
->>>>>>> 87c2e73501f04c0aa7db71da5ee62218e0fcb243
+
+
+
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(Comidas $comida)
     {
         //Se usa la funcion delete() para borrar el registro
-        $comidas->delete();
+        $comida -> delete();
 
         return redirect()->route('comidas.index')
             ->with('success', 'Comida eliminada correctamente');
