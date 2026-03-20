@@ -7,5 +7,5 @@ use Illuminate\Database\Eloquent\Model;
 class Comidas extends Model
 {
     //Indicar los campos que si se pueden llenar
-    protected $fillable = ['nombre', 'Disponibilidad', 'Precio', 'Descripcion', 'Tipo_de_comida', 'Categoria', 'Stock'];
+    protected $fillable = ['Nombre', 'Disponibilidad', 'Precio', 'Descripcion', 'Tipo_de_comida', 'Categoria', 'Stock'];
 }
