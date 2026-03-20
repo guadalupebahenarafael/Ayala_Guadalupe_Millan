@@ -79,7 +79,7 @@ class ComidasController extends Controller
         ]);
 
         //Se realiza la actualizacion del registro
-        $
+    
     }
 
     /**
