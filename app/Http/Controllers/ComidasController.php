@@ -7,11 +7,14 @@ use Illuminate\Http\Request;
 class ComidasController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     *Mostrar una lista de las comidas
      */
     public function index()
     {
-        //
+        //Obtner todos los registros de comida
+        $comidas = Comida::all();
+        //Se manda la variable de los registros a la vista
+        return view('comidas.index', compact('comidas'));
     }
 
     /**
@@ -27,7 +30,18 @@ class ComidasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Comida::create([
+            //<NombreFormulario> => request-><NombreDB>
+            'Nombre' => $request->Nombre,
+            'Disponibilidad' => $request->Disponibilidad,
+            'Precio' => $request->Precio,
+            'Descripcion' => $request->Descripcion,
+            'Tipo de comida' => $request->Tipo_de_comida,
+            'Categoria' => $request->Categoria,
+            'Stock' => $request->Stock
+        ]);
+        //Redirecciona a una ruta especifica
+        return redirect()->route('comidas.create');
     }
 
     /**
