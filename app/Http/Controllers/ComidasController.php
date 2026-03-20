@@ -79,7 +79,7 @@ class ComidasController extends Controller
         ]);
 
         //Se realiza la actualizacion del registro
-        $comida->update($request->all());
+        $comidas->update($request->all());
 
         //Se retorna la actualizacion al index
         return redirect()->route('comidas.index')
@@ -92,7 +92,7 @@ class ComidasController extends Controller
     public function destroy(string $id)
     {
         //Se usa la funcion delete() para borrar el registro
-        $comida->delete();
+        $comidas->delete();
 
         return redirect()->route('comidas.index')
             ->with('success', 'Comida eliminada correctamente');
