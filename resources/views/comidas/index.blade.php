@@ -44,7 +44,7 @@
         @foreach ($comidas as $comida)
             <tr>
                 <td>{{ $comida->id }}</td>
-                <td>{{ $comida->nombre }}</td>
+                <td>{{ $comida->Nombre }}</td>
                 <td>{{ $comida->Disponibilidad }}</td>
                 <td>{{ $comida->Precio }}</td>
                 <td>{{ $comida->Descripcion }}</td>
