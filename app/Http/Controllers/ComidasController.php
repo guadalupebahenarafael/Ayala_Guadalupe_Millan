@@ -24,6 +24,7 @@ class ComidasController extends Controller
     public function create()
     {
         //
+        return view('comidas.create');
     }
 
     /**
