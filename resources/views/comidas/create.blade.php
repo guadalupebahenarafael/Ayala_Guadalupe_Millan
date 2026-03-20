@@ -30,9 +30,8 @@
         <div class="input-group mb-3">
             <input type="text" name="Descripcion" placeholder="Descripcion" class="form-control">
         </div>
-        <div class="input-group mb-3">
-            <input type="text" name="Tipo de comida" placeholder="Tipo de comida" class="form-control">
-        </div>
+        
+        
 
         <div class="input-group mb-3">
             <input type="text" name="Categoria" placeholder="Categoria" class="form-control">
