@@ -23,7 +23,7 @@ class ComidasController extends Controller
      */
     public function create()
     {
-        return viow('comidas.create');
+        return view('comidas.create');
     }
 
     /**
