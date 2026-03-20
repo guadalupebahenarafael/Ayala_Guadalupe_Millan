@@ -12,7 +12,7 @@
     <h1>Comidas</h1>
 
     <div class="d-flex justify-content-end mb-2">
-        <a href="{{ route('comida.create') }}" class="btn btn-success me-3">
+        <a href="{{ route('comidas.create') }}" class="btn btn-success me-3">
         <i class="fa-solid fa-plus"></i> Nuevas comidas
         </a>
         <form action="{{ route('cerrar') }}" method="POST">
