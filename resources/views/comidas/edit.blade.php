@@ -10,12 +10,12 @@
 
     @section('content')
 
-    <h1>EDITAR COMIDA: {{ $comida->nombre }}</h1>
+    <h1>EDITAR COMIDA: {{ $comida->Nombre }}</h1>
     <form action="{{ route('comidas.update', $comida) }}" method="POST">
          @csrf
         <!-- Indicar método para actualizar un registro -->
         @method('PUT')
-        <input value="{{ $comida->nombre }}" type="text" name="nombre" placeholder="Nombre" class="form-control">
+        <input value="{{ $comida->Nombre }}" type="text" name="Nombre" placeholder="Nombre" class="form-control">
         <br>
         <input value="{{ $comida->Disponibilidad }}" type="text" name="Disponibilidad" placeholder="Disponibilidad" class="form-control">
         <br>
@@ -23,7 +23,7 @@
         <br>
         <input value="{{ $comida->Descripcion }}" type="text" name="Descripcion" placeholder="Descripcion" class="form-control">
         <br>
-        <input value="{{ $comida->Tipo_de_comida }}" type="text" name="Tipo de comida" placeholder="Tipo de comida" class="form-control">
+        <input value="{{ $comida->Tipo_de_comida }}" type="text" name="Tipo_de_comida" placeholder="Tipo de comida" class="form-control">
         <br>
         <input value="{{ $comida->Categoria }}" type="text" name="Categoria" placeholder="Categoria" class="form-control">
         <br>
