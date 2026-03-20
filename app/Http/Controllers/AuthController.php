@@ -35,7 +35,7 @@ class AuthController extends Controller
         // Iniciar sesión de forma automatica
         Auth::login($user);
 
-        return redirect()->route('libros.index');
+        return redirect()->route('comidas.index');
     }
 
     // Metodo para regresar vista de inicio de sesión

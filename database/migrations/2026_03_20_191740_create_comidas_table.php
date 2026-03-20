@@ -9,16 +9,16 @@ return new class extends Migration
     /**
      * Run the migrations.
      */
-    public function up(): void
+       public function up(): void
     {
         Schema::create('comidas', function (Blueprint $table) {
             $table->id();
-            $table->string('nombre');
+            $table->string('Nombre');
             $table->boolean('Disponibilidad');
             $table->double('Precio');
             $table->string('Descripcion');
-            $table->string('Tipo de comida');
-            $table->string('categoria');
+            $table->string('Tipo_de_comida');
+            $table->string('Categoria');
             $table->boolean('Stock');
             $table->timestamps();
         });
