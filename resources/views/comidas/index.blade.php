@@ -48,7 +48,7 @@
                 <td>{{ $comida->Disponibilidad }}</td>
                 <td>{{ $comida->Precio }}</td>
                 <td>{{ $comida->Descripcion }}</td>
-                <td>{{ $comida->Tipo de comida }}</td>
+                <td>{{ $comida->Tipo_de_comida }}</td>
                 <td>{{ $comida->Categoria }}</td>
                 <td>{{ $comida->Stock }}</td>
                 <td>

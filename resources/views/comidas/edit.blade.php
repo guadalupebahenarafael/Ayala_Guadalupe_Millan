@@ -23,7 +23,7 @@
         <br>
         <input value="{{ $comida->Descripcion }}" type="text" name="Descripcion" placeholder="Descripcion" class="form-control">
         <br>
-        <input value="{{ $comida->Tipo de comida }}" type="text" name="Tipo de comida" placeholder="Tipo de comida" class="form-control">
+        <input value="{{ $comida->Tipo_de_comida }}" type="text" name="Tipo de comida" placeholder="Tipo de comida" class="form-control">
         <br>
         <input value="{{ $comida->Categoria }}" type="text" name="Categoria" placeholder="Categoria" class="form-control">
         <br>
