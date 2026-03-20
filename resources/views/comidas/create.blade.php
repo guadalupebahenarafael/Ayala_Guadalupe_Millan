@@ -51,6 +51,6 @@
                 <i class="fa-solid fa-eye"></i> Ver Comidas
         </a>
     </div>
-    
+    @endsection
 </body>
 </html>
