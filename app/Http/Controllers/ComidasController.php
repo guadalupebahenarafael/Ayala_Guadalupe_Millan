@@ -65,7 +65,7 @@ class ComidasController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Comidas $comida)
     {
         //Se hace una validacion de listado de campos
         $request->validate([
@@ -79,12 +79,7 @@ class ComidasController extends Controller
         ]);
 
         //Se realiza la actualizacion del registro
-
-
         $comida->update($request->all());
-
-        $comida->update($request->all());
-
 
         //Se retorna la actualizacion al index
         return redirect()->route('comidas.index')
