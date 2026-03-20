@@ -59,6 +59,7 @@ class ComidasController extends Controller
     public function edit(string $id)
     {
         //
+        return view('comidas.edit', compact('comidas'));
     }
 
     /**
@@ -66,7 +67,19 @@ class ComidasController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        //Se hace una validacion de listado de campos
+        $request->validate([
+            'Nombre' => 'required',
+            'Disponibilidad' => 'required',
+            'Precio' => 'required',
+            'Descripcion' => 'required',
+            'Tipo de comida' => 'required',
+            'Categoria' => 'required',
+            'Stock' => 'required'
+        ]);
+
+        //Se realiza la actualizacion del registro
+        $
     }
 
     /**
