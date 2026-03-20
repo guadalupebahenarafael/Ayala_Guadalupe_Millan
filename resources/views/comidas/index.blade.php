@@ -52,10 +52,10 @@
                 <td>{{ $comida->Categoria }}</td>
                 <td>{{ $comida->Stock }}</td>
                 <td>
-                    <a href="{{ route('comida.edit', $comida) }}" >
+                    <a href="{{ route('comidas.edit', $comida) }}" >
                         <button class="btn btn-warning"><i class="fa-solid fa-pen-to-square"></i></button>  
                     </a>
-                    <form action="{{ route('comida.destroy', $comida) }}" method="POST" class="d-inline">
+                    <form action="{{ route('comidas.destroy', $comida) }}" method="POST" class="d-inline">
                         @csrf
                         @method('DELETE')
                             <button 

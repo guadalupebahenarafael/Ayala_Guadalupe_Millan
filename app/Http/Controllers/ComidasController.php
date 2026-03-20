@@ -79,13 +79,20 @@ class ComidasController extends Controller
         ]);
 
         //Se realiza la actualizacion del registro
+<<<<<<< HEAD
 
         $comida->update($request->all());
+=======
+        $comidas->update($request->all());
+>>>>>>> 87c2e73501f04c0aa7db71da5ee62218e0fcb243
 
         //Se retorna la actualizacion al index
         return redirect()->route('comidas.index')
             ->with('success', 'Comida actualizada correctamente');
+<<<<<<< HEAD
 
+=======
+>>>>>>> 87c2e73501f04c0aa7db71da5ee62218e0fcb243
     }
 
     /**
@@ -94,7 +101,7 @@ class ComidasController extends Controller
     public function destroy(string $id)
     {
         //Se usa la funcion delete() para borrar el registro
-        $comida->delete();
+        $comidas->delete();
 
         return redirect()->route('comidas.index')
             ->with('success', 'Comida eliminada correctamente');
