@@ -79,19 +79,11 @@ class ComidasController extends Controller
         ]);
 
         //Se realiza la actualizacion del registro
-<<<<<<< HEAD
-
-=======
->>>>>>> 8abba8613a7171c654cd5b487f5515aedcf35d8c
         $comida->update($request->all());
 
         //Se retorna la actualizacion al index
         return redirect()->route('comidas.index')
             ->with('success', 'Comida actualizada correctamente');
-<<<<<<< HEAD
-
-=======
->>>>>>> 8abba8613a7171c654cd5b487f5515aedcf35d8c
     }
 
     /**
