@@ -37,7 +37,7 @@ class ComidasController extends Controller
             'Disponibilidad' => $request->Disponibilidad,
             'Precio' => $request->Precio,
             'Descripcion' => $request->Descripcion,
-            'Tipo de comida' => $request->Tipo_de_comida,
+            'Tipo_de_comida' => $request->Tipo_de_comida,
             'Categoria' => $request->Categoria,
             'Stock' => $request->Stock
         ]);
@@ -79,7 +79,11 @@ class ComidasController extends Controller
         ]);
 
         //Se realiza la actualizacion del registro
-        $
+        $comida->update($request->all());
+
+        //Se retorna la actualizacion al index
+        return redirect()->route('comidas.index')
+            ->with('success', 'Comida actualizada correctamente');
     }
 
     /**
@@ -87,6 +91,20 @@ class ComidasController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        //Se usa la funcion delete() para borrar el registro
+        $comida->delete();
+
+        return redirect()->route('comidas.index')
+            ->with('success', 'Comida eliminada correctamente');
+    }
+
+    public function logout(Request $request){
+        //Cierre de la sesion 
+        Auth::logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/acceso');
     }
 }
