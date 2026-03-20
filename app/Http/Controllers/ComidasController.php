@@ -12,7 +12,7 @@ class ComidasController extends Controller
     public function index()
     {
         //Obtner todos los registros de comida
-        $comidas = Comida::all();
+        $comidas = Comidas::all();
         //Se manda la variable de los registros a la vista
         return view('comidas.index', compact('comidas'));
     }

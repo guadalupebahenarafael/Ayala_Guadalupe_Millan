@@ -57,7 +57,7 @@ class AuthController extends Controller
             $request -> session() -> regenerate();
 
             // Redireccionar al usuario a cualquier ruta del sistema
-            return redirect() -> route('libros.index');
+            return redirect() -> route('comidas.index');
         }
 
         return back() -> withErrors([
