@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('comidas', function (Blueprint $table) {
             $table->id();
+            $table->string('nombre');
+            $table->boolean('Disponibilidad');
+            $table->double('Precio');
+            $table->string('Descripcion');
+            $table->string('Tipo de comida');
+            $table->string('categoria');
+            $table->boolean('Stock');
             $table->timestamps();
         });
     }
